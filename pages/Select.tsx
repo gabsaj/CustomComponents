@@ -3,7 +3,7 @@ import Select from "../components/select/Select";
 const SelectPage = () => {
   return (
     <>
-      <Select />
+      <Select options={["Option1", "option2"]} />
     </>
   );
 };
