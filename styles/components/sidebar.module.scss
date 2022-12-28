@@ -1,0 +1,20 @@
+.sidebar {
+  height: 100vh;
+  width: 10vw;
+  background-color: #251544;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  ul {
+    list-style: none;
+    li {
+      font-size: 20px;
+      margin: 8px 0;
+      transition: all 100ms linear;
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+}
