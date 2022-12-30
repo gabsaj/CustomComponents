@@ -1,34 +1,47 @@
 .select {
+  margin-top: 48px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   &__bar {
+    border-radius: 6px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    text-transform: capitalize;
+    min-width: 160px !important;
     position: relative;
     color: #000000;
     padding: 8px 24px;
     background-color: #f0f8ff;
     cursor: pointer;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   ul {
     position: absolute;
     border: 1px solid #ffffff;
+
     list-style: none;
     width: 100%;
     left: 0;
-    top: 34px;
+    top: 32px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
     li {
       color: #ffffff;
       padding: 8px 24px;
-      border-bottom: 1px solid white;
       text-transform: capitalize;
       transition: all 80ms linear;
+      border-top: 1px solid #ffffff;
       cursor: pointer;
       &:hover {
-        background-color: #6f00ff54;
+        background-color: #ffffff7c;
+      }
+      &:last-of-type {
+        border-top: none;
+        &:hover {
+          background-color: transparent;
+        }
       }
     }
   }

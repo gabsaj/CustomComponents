@@ -19,3 +19,12 @@
     }
   }
 }
+
+.container {
+  margin: 16px 0;
+  display: flex;
+  gap: 16px;
+  &__main {
+    margin: 100px 100px;
+  }
+}
