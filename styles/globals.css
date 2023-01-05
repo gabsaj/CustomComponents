@@ -90,6 +90,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  max-width: 40%;
+  transition: all 200ms linear;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -97,6 +102,7 @@ header {
 
 main {
   margin: 100px 100px;
+  width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -5,6 +5,7 @@ import layout from "../styles/components/layout.module.scss";
 
 const SelectPage = () => {
   const [showText, setShowText] = useState({ description: true, usage: false });
+  const [savedVal, setSavedVal] = useState<string>("");
 
   const handleText = (option: string) => {
     if (option === "description") {
@@ -13,6 +14,13 @@ const SelectPage = () => {
       setShowText({ description: false, usage: true });
     }
   };
+
+  const getValue = (value: string) => {
+    setSavedVal(value);
+  };
+
+  console.log(savedVal);
+
   return (
     <main>
       <header>
@@ -31,13 +39,41 @@ const SelectPage = () => {
             Usage
           </button>
         </div>
-        {showText.description && <p>Some description</p>}
-        {showText.usage && <p>Some usage</p>}
+        {showText.description && (
+          <p>
+            This Select component that has general functions of a select; user
+            is able to add custom className to it as well as add a preset style
+            that changes it's borders and selected option color.
+          </p>
+        )}
+        {showText.usage && (
+          <p>
+            This Select Component can simply be implemented just by adding
+            possible options in a <b>options</b> prop. Options are mapped in a
+            dropdown and you can pass it's value with <b>getValue</b> prop.
+            Width prop sets the component width, and is 150px minimum by
+            default.
+          </p>
+        )}
       </header>
       <Select
-        options={["Option1", "option2", "Something", "Something2"]}
+        options={[
+          "Option1",
+          "Option2",
+          "Option3",
+          "Option4",
+          "Option5",
+          "Option6",
+        ]}
         width={200}
+        getValue={getValue}
       />
+      <div>
+        <pre>
+          <h2>Selected option:</h2>
+          {savedVal}
+        </pre>
+      </div>
     </main>
   );
 };
